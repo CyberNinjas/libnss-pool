@@ -1,7 +1,8 @@
 /*
  * libnss_pool.c
- * Author: Marcin Stolarek (stolarek.marcin@gmail.com)
-*/
+ * Author: Marcin Stolarek <stolarek.marcin@gmail.com>
+ * Author: Lucas Ramage <stolarek.marcin@gmail.com>
+ */
 
 #include <nss.h>
 #include <pwd.h>
