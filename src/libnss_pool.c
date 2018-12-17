@@ -52,7 +52,7 @@ _nss_pool_getpwnam_r( const char *name,
 		// If passwd set to ! then it means that entry is empty
                 // and can be used for new user
 		else if(!strcmp("!",it->pw_passwd) && !created ) {
-			fprintf(log,"new %s \n",it
+			fprintf(log,"new %s \n",it->pw_name);
                         // FIXME this may be an issue if previous login name 
                         // was shorter then new one->pw_name);
 			strcpy(it->pw_name,name); 
