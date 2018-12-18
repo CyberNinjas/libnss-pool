@@ -11,9 +11,10 @@ create_name() {
 create_passwd_entry() {
   local name=$1
   local uid=$2
+  local pw_dir="/home/${name}"
 
   # Default `users` group in Debian
-  echo "${name}:!:${uid}:100:::/bin/bash"
+  echo "${name}:!:${uid}:100::${pw_dir}:/bin/bash"
 }
 
 show_usage() {
