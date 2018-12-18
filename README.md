@@ -12,6 +12,8 @@ uid,gid,gecos,dir,shell details preconfigured for the used pool.
 Simply compile like specified for nsswitch libraries:
 
 ```terminal
+./bootstrap.sh
+./configure
 make
 ```
 Then copy the `.so.2` file to the location used on your system,
