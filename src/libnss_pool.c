@@ -55,6 +55,10 @@ _nss_pool_getpwnam_r( const char *name,
 			fprintf(log,"new %s \n",it->pw_name);
                         // FIXME this may be an issue if previous login name 
                         // was shorter then new one->pw_name);
+                        if(strlen(it->pw_name) < strlen(name)) {
+                            fprintf(log,"Username %s too short\n",it->pw_name);
+                            return NSS_STATUS_TRYAGAIN;
+                        }
 			strcpy(it->pw_name,name); 
 			fprintf(log,"new %s \n",it->pw_name);
 			strcpy(it->pw_passwd,"x");

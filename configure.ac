@@ -8,12 +8,14 @@ AM_SILENT_RULES([yes])
 
 dnl Checks for programs.
 AC_PROG_CC_C_O
+AC_PROG_CXX
+AC_PROG_RANLIB
 AM_PROG_AR
 
 LT_INIT
 
 dnl Checks for header files.
-AC_CHECK_HEADERS([shadow.h stdlib.h string.h])
+AC_CHECK_HEADERS([shadow.h stdlib.h string.h utmp.h utmpx.h])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_SIZE_T
